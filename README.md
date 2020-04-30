@@ -1,6 +1,6 @@
-# mac-renaming-file
+# mac-renaming-downloaded-file
 
-macOS automatically file renaming from download directory
+macOS automatically file renaming for download files
 
 ## 목적
 

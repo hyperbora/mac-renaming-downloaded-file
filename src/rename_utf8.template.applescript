@@ -4,7 +4,9 @@ on adding folder items to theAttachedFolder after receiving theNewItems
 		repeat with index from 1 to the count of all_files
 			set this_file to item index of all_files
 			set this_file_name to name of (info for this_file)
-			if (this_file_name does not end with ".part" and this_file_name does not end with ".download") then
+			set this_file_ext to name extension of (info for this_file)
+			set ignore_ext to "part download"
+			if (ignore_ext does not contain this_file_ext) then
 				-- 쉘 스크립트 경로 수정 (/path/to/rename_utf8.sh)
 				set new_file_name to do shell script "/path/to/rename_utf8.sh \"" & this_file_name & "\""
 				if (this_file_name is not new_file_name) then
